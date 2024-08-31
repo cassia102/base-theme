@@ -1,0 +1,28 @@
+@mixin content {
+    p, h1, h2, h3, h4, h5 {
+        &:not(:last-child) {
+            margin-bottom: 1.4rem;
+        }
+        // margin-bottom: 1.4rem;
+    }
+
+    ul:not([class]), ol:not([class]) {
+        padding-left: 1rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.4rem;
+        }
+
+        li {
+            padding-left: 0.5rem;
+
+            + li {
+                margin-top: 0.75rem;
+            }
+        }
+    }
+}
+
+.elementor-widget-text-editor, .content {
+    @include content;
+}

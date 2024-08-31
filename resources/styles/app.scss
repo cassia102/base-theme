@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'helpers/media-queries';
+
+@import 'common/global';
+@import 'common/reset';
+@import 'common/content';
+
+@import 'components/button';
+@import 'components/forms';
+@import 'components/nav';
+
+@import 'layouts/pages';
+@import 'layouts/posts';
+@import 'layouts/header';
+@import 'layouts/footer';

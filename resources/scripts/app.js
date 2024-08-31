@@ -1,10 +1,12 @@
 import domReady from '@roots/sage/client/dom-ready';
+import Test from './components/test';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+
+  new Test();
 });
 
 /**
