@@ -1,36 +1,130 @@
-<p align="center">
-  <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
-  </a>
+<p align="center">Advanced WordPress starter theme with Tailwind CSS and Laravel Blade based on the <a href="https://github.com/roots/sage">Sage theme</a> with some adaptations</p>
+
+## Setup
+
+### Requirments
+<ul>
+  <li>PHP 8.2</li>
+  <li>Node 20</li>
+  <li>Composer</li>
+</ul>
+
+## Getting Started
+
+<ul>
+  <li>From theme run composer install</li>
+  <li>Run composer require roots/acord</li>
+  <li>**If using nvm run nvm use 20</li>
+  <li>Run Yarn</li>
+  <li>Run Yarn dev to watch for changes or Yarn build</li>
+</ul>
+
+<p>To use SCSS:</p>
+<ul>
+  <li>yarn add @roots/bud-sass --dev</li>
+  <li>yarn add @roots/bud-stylelint --dev</li>
+</ul>
+
+<p>
+Create a Stylelint config file at .stylelintrc.cjs:</br>
+module.exports = {
+  extends: ['@roots/bud-sass/config/stylelint'],
+  rules: {
+    'import-notation': null,
+    'no-empty-source': null,
+  },
+};
 </p>
 
-<p align="center">
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/sage?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
+## Project Tree
 
-  <a href="https://github.com/roots/sage/actions/workflows/main.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=main&logo=github&label=CI&style=flat-square">
-  </a>
 
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square">
-  </a>
-</p>
+```
+cassia-theme
+├─ .DS_Store
+├─ base-theme
+│  ├─ .editorconfig
+│  ├─ LICENSE.md
+│  ├─ README.md
+│  ├─ app
+│  │  ├─ Providers
+│  │  │  └─ ThemeServiceProvider.php
+│  │  ├─ View
+│  │  │  └─ Composers
+│  │  │     ├─ App.php
+│  │  │     ├─ Comments.php
+│  │  │     └─ Post.php
+│  │  ├─ elementor.php
+│  │  ├─ filters.php
+│  │  ├─ helpers.php
+│  │  └─ setup.php
+│  ├─ bud.config.js
+│  ├─ composer.json
+│  ├─ functions.php
+│  ├─ index.php
+│  ├─ jsconfig.json
+│  ├─ package.json
+│  ├─ resources
+│  │  ├─ fonts
+│  │  ├─ images
+│  │  ├─ scripts
+│  │  │  ├─ app.js
+│  │  │  ├─ components
+│  │  │  │  └─ test.js
+│  │  │  ├─ editor.js
+│  │  │  └─ filters
+│  │  │     └─ button.filter.js
+│  │  ├─ styles
+│  │  │  ├─ app.scss
+│  │  │  ├─ common
+│  │  │  │  ├─ _content.scss
+│  │  │  │  ├─ _global.scss
+│  │  │  │  └─ _reset.scss
+│  │  │  ├─ components
+│  │  │  │  ├─ _button.scss
+│  │  │  │  ├─ _forms.scss
+│  │  │  │  └─ _nav.scss
+│  │  │  ├─ editor.scss
+│  │  │  ├─ helpers
+│  │  │  │  └─ _media-queries.scss
+│  │  │  └─ layouts
+│  │  │     ├─ _footer.scss
+│  │  │     ├─ _header.scss
+│  │  │     ├─ _pages.scss
+│  │  │     └─ _posts.scss
+│  │  └─ views
+│  │     ├─ 404.blade.php
+│  │     ├─ components
+│  │     │  └─ alert.blade.php
+│  │     ├─ forms
+│  │     │  └─ search.blade.php
+│  │     ├─ index.blade.php
+│  │     ├─ layouts
+│  │     │  └─ app.blade.php
+│  │     ├─ page.blade.php
+│  │     ├─ partials
+│  │     │  ├─ comments.blade.php
+│  │     │  ├─ content-page.blade.php
+│  │     │  ├─ content-search.blade.php
+│  │     │  ├─ content-single.blade.php
+│  │     │  ├─ content.blade.php
+│  │     │  ├─ entry-meta.blade.php
+│  │     │  └─ page-header.blade.php
+│  │     ├─ search.blade.php
+│  │     ├─ sections
+│  │     │  ├─ footer.blade.php
+│  │     │  ├─ header.blade.php
+│  │     │  └─ sidebar.blade.php
+│  │     ├─ single.blade.php
+│  │     └─ template-custom.blade.php
+│  ├─ screenshot.png
+│  ├─ style.css
+│  ├─ tailwind.config.js
+│  ├─ theme.json
+│  └─ yarn.lock
+└─ base-theme.zip
 
-<p align="center">Advanced WordPress starter theme with Tailwind CSS and Laravel Blade</p>
-
-<p align="center">
-  <a href="https://roots.io/sage/">Website</a> &nbsp;&nbsp; <a href="https://roots.io/sage/docs/installation/">Documentation</a> &nbsp;&nbsp; <a href="https://github.com/roots/sage/releases">Releases</a> &nbsp;&nbsp; <a href="https://discourse.roots.io/">Community</a>
-</p>
-
-## Sponsors
-
-Sage is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, please consider [sponsoring Roots](https://github.com/sponsors/roots).
-
-<div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="120" height="90"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="120" height="90"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="Itineris" width="120" height="90"></a>
-</div>
+```
 
 ## Overview
 
@@ -40,15 +134,3 @@ Sage is a WordPress starter theme with block editor support.
 - Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
 - Modern frontend development workflow powered by [Bud](https://bud.js.org/)
 - Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
-
-## Getting Started
-
-See the [Sage installation documentation](https://roots.io/sage/docs/installation/).
-
-## Stay Connected
-
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
